@@ -14,7 +14,7 @@
 # Description: No description
 # Author: shadowhikka
 # Commands:
-# .randmemes
+# .randcat
 # ---------------------------------------------------------------------------------
 
 # █▀ █░█ ▄▀█ █▀▄ █▀█ █░█░█
@@ -42,7 +42,7 @@ class RandomCatsMod(loader.Module):
     async def on_dlmod(self):
         await utils.dnd(self._client, self.memes_bot, True)
 
-    async def randmemescmd(self, message: Message):
+    async def randcatcmd(self, message: Message):
         async with self._client.conversation(self.memes_bot) as conv:
             await conv.send_message("/cat")
             phtmem = await conv.get_response()
