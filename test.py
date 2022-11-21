@@ -44,7 +44,7 @@ class RandomCatsMod(loader.Module):
 
     async def randcatcmd(self, message: Message):
         async with self._client.conversation(self.memes_bot) as conv:
-            await conv.send_message("/cat")
+            await conv.send_message("/start")
             phtmem = await conv.get_response()
             await conv.mark_read()
             await message.delete()
