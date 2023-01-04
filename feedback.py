@@ -129,7 +129,7 @@ class FeedbackMod(loader.Module):
         self._name = utils.escape_html(get_display_name(self._client.hikka_me))
         self._ratelimit = {}
         self._markup = self.inline.generate_markup(
-            {"text": "✍️ Оставьте сообщение [1 в минуту]", "data": "fb_leave_message"}
+            {"text": "✍️ Оставьте сообщение [Одно в минуту]", "data": "fb_leave_message"}
         )
         self._cancel = self.inline.generate_markup(
             {"text": "🚫 Cancel", "data": "fb_cancel"}
